@@ -1,4 +1,4 @@
-// This file is part of www.nand2tetris.org
+
 // and the book "The Elements of Computing Systems"
 // by Nisan and Schocken, MIT Press.
 // File name: projects/03/a/Bit.hdl
@@ -14,5 +14,7 @@ CHIP Bit {
     OUT out;
 
     PARTS:
-    // Put your code here:
+    Mux(a=out1, b=in, sel=load, out=mem);
+    DFF(in=mem, out=out1);
+    Or(a=false, b=out1, out=out);
 }
