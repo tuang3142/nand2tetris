@@ -20,5 +20,5 @@ M=0
 M=1
 
 (end)
-@10
+@end // test this
 0;JMP
